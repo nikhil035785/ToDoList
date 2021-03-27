@@ -5,25 +5,22 @@ arr = [];
 addtolist.onclick = function(){
     let titles = document.getElementById("title").value;
     let descri = document.getElementById("decription").value;
-    if(localStorage.getItem("myList") == null){
-        
-        localStorage.setItem("myList", arr);
+    if(localStorage.getItem("myList") != null){
+        arr = JSON.parse(localStorage.getItem("myList"));
         addList(titles, descri);
     }
     else{
+        localStorage.setItem("myList", arr);
         addList(titles, descri);
     }
 }
 
 function addList(title, disc){
     arr.push([title,disc]);
-    //let list = JSON.parse(localStorage.getItem("myList"));
-    //.push([title,disc]);
     localStorage.setItem("myList",JSON.stringify(arr));
     document.getElementById("title").value = "";
     document.getElementById("decription").value = "";
     ListUpdate();
-    // console.log(JSON.parse(localStorage.getItem("myList")));
 }
 
 document.getElementById("clearlist").addEventListener("click",function(){
@@ -43,7 +40,6 @@ function ListUpdate(){
         for (let i = 0; i < list.length; i++) {
             var element = list[i];
             
-            //console.log(element);
             if(element == null){
                 console.log("Null value");
             }else{
@@ -53,8 +49,6 @@ function ListUpdate(){
         }
     }
         
-        
-    //console.log(list);
 }
 
 function deleteFromList(index){
@@ -63,5 +57,4 @@ function deleteFromList(index){
     localStorage.setItem("myList",JSON.stringify(list));
     arr = list;
     ListUpdate()
-    // alert(index);
 }
