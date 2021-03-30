@@ -5,13 +5,27 @@ arr = [];
 addtolist.onclick = function(){
     let titles = document.getElementById("title").value;
     let descri = document.getElementById("decription").value;
-    if(localStorage.getItem("myList") != null){
-        arr = JSON.parse(localStorage.getItem("myList"));
-        addList(titles, descri);
+    if (check() == true) {
+        if(localStorage.getItem("myList") != null){
+            arr = JSON.parse(localStorage.getItem("myList"));
+            addList(titles, descri);
+        }
+        else{
+            localStorage.setItem("myList", arr);
+            addList(titles, descri);
+        }
     }
     else{
-        localStorage.setItem("myList", arr);
-        addList(titles, descri);
+        alert(check());
+    }
+}
+
+function check(){
+    if((listTable == "" || listTable == null) && (addtolist == "" || addtolist == null)){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
