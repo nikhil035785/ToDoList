@@ -16,16 +16,23 @@ addtolist.onclick = function(){
         }
     }
     else{
-        alert(check());
+        if(check() == false){
+            alert("Please Enter");
+        }
+        else{
+            console.log("ok");
+        }
     }
 }
 
 function check(){
-    if((listTable == "" || listTable == null) && (addtolist == "" || addtolist == null)){
-        return true;
+    let titles = document.getElementById("title").value;
+    let descri = document.getElementById("decription").value;
+    if(titles == "" || descri == "" || titles == null || descri == null){
+        return false;
     }
     else{
-        return false;
+        return true;
     }
 }
 
@@ -46,8 +53,25 @@ document.getElementById("clearlist").addEventListener("click",function(){
 
 function ListUpdate(){
     let list = JSON.parse(localStorage.getItem("myList"));
+    console.log("start");
     if (list == "") {
         console.log("Null");
+    }
+    else if (list == null) {
+        list = [];
+        localStorage.setItem("myList", JSON.stringify(list));
+        listTable.innerHTML = ``;
+        for (let i = 0; i < list.length; i++) {
+            var element = list[i];
+            
+            if(element == null){
+                console.log("Null value");
+            }else{
+                var num = i+1;
+                listTable.innerHTML += `<tr><td>`+num+`</td><td>`+element[0]+`</td><td>`+element[1]+`</td><td><button onclick="deleteFromList(`+i+`)">Delete <i class="fa fa-trash"></i></button></td></tr>`;
+                console.log("done1");
+            }
+        }
     }
     else{
         listTable.innerHTML = ``;
@@ -59,6 +83,7 @@ function ListUpdate(){
             }else{
                 var num = i+1;
                 listTable.innerHTML += `<tr><td>`+num+`</td><td>`+element[0]+`</td><td>`+element[1]+`</td><td><button onclick="deleteFromList(`+i+`)">Delete <i class="fa fa-trash"></i></button></td></tr>`;
+                console.log("done2");
             }
         }
     }
