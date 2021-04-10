@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Template 2</title>
+    <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="css/resposive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="todolist()">
+    <div class="container">
+        <div class="section-nav bg-secondary nav-section">
+            <a href="#" class="logo">To-Do List</b></a>
+            <nav class="nav navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Temp  <i class="fa fa-clipboard" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="section bg-primary body">
+            <div class="row" id="listbox">
+
+                <!-- <div class="col-sm-4 col-md-4">
+                    <div class="box-container">
+                        <div class="box-top">
+                            <p class="topic-name">Topic Name</p>
+                            <button id="" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="box-body">
+                            <p class="description">
+                                Lorem ipsum dolor sit amet 
+                                consectetur adipisicing elit. 
+                                Numquam earum voluptate 
+                                obcaecati totam dicta sunt 
+                                magni labore illo ratione, 
+                                provident eligendi ullam nihil! 
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+                <h2>List is empty.</h2>
+
+            </div>
+        </div>
+        <div class="section-bottom bg-bottom">
+            <button class="add" id="newToDo">Add New <i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+            <button class="remove" id="ClearList">Clear List <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div class="modal" id="modal" style="display: none;">
+        <div class="modal-box">
+            <!-- <form> -->
+            <div class="form">
+                <div class="form-grp">
+                    <label for="TopicName">Topic Name</label>
+                    <input type="text" class="topicName" id="topicName" placeholder="Enter Topic Name" maxlength="20">
+                </div>
+                <div class="form-grp">
+                    <label for="TopicDescription">Description</label>
+                    <textarea name="Description" id="topicDescription" cols="30" rows="5" class="topicDescription" placeholder="Enter Description"></textarea>
+                </div>
+                <div class="form-grp-btn">
+                    <button class="addNew" id="addNew">Add</button>
+                    <button class="Cancel" id="Cancel">Cancel</button>
+                </div>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <div class="modal" id="modal2" style="display: none;">
+        <div class="modal-box">
+            <!-- <form> -->
+            <center><h2 id="topic">Update</h2></center>
+            <div class="form">
+                <div class="form-grp">
+                    <label for="TopicName">Topic Name</label>
+                    <input type="text" class="topicName" id="topicName2" placeholder="Enter Topic Name" maxlength="20">
+                </div>
+                <div class="form-grp">
+                    <label for="TopicDescription">Description</label>
+                    <textarea name="Description" id="topicDescription2" cols="30" rows="5" class="topicDescription" placeholder="Enter Description"></textarea>
+                </div>
+                <div class="form-grp-btn">
+                    <button class="addNew" id="update2" onclick="update()">Update</button>
+                    <button class="Cancel" id="Cancel2" onclick="cancel2()">Cancel</button>
+                </div>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <script src="js/main2.js"></script>
+</body>
+</html>

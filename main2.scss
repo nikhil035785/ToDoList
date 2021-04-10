@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+//css for template 2
+.bg-primary {
+    background-color: #6E2843;
+}
+.bg-secondary {
+    background-color: #1844AB;
+}
+.bg-bottom{
+    background-color: #AC73AD;
+}
+
+button{
+    cursor: pointer;
+}
+button:hover{
+    animation: zm ease 1s infinite;
+}
+
+.logo{
+    font-family: 'Lobster',Arial, Helvetica, sans-serif;
+    color:#FAE701;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 0.7rem;
+    font-weight: bold;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+    50% {transform: rotate(360deg);}
+}
+.nav-section{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 30px;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-menu{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        list-style-type: none;
+        font-size: 1em;
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        i.fa-trash-o{
+            padding: 5px;
+            border-radius: 10px;;
+        }
+    }
+}
+.remove{
+    padding: 10px;
+    border-radius: 0.5rem;     
+    background-color: #FF0000;
+    border:none;
+    color: #fff;
+    outline: none;
+    width: 150px;
+    font-size: 18px;
+    i{
+        // font-size: 20px;
+        padding: 0 0 0 10px;
+    }
+}
+.add{
+    padding: 10px;
+    border-radius: 0.5rem;     
+    background-color: #FAE701;
+    border:none;
+    color: #fff;
+    outline: none;
+    width: 150px;
+    font-size: 18px;
+    i{
+        // font-size: 20px;
+        padding: 0 0 0 10px;
+    }
+}
+.body{
+    min-height: 92vh;
+}
+
+.box-container{
+    background-color: #fff;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.3em;
+
+    .box-top{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.2em 0;
+
+        .topic-name{
+            font-weight: 500;
+            font-size: 20px;
+        }
+        button{
+            
+            padding: 0.3em 0.7em;
+            border-radius: 0.7em;
+            border:none;
+            outline: none;
+            i{
+                font-size: 18px;
+                color: #fff;
+
+            }
+        }
+        button.edit{
+            background-color: #1844ab;
+        }
+        button.removes{
+            background-color: #FF0000;
+        }
+    }
+
+    .box-body{
+        padding: 0.3em 0;
+        .description{
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.2em;
+        }
+    }
+
+}
+
+.section-bottom{
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-evenly;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+}
+
+.modal{
+    z-index: 2;
+    position: fixed;
+    background-color: #00000027;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // transform: translateY(-100%);
+    .modal-box{
+        background-color: #fff;
+        border-radius: 1em;
+        // width: fit-content;
+        height: fit-content;
+        box-shadow: 0px 2px 20px 0px black;
+        padding: 10px;
+        .form{
+            width: 100%;
+            .form-grp{
+                display: flex;
+                flex-direction: column;
+                padding: 10px 0;
+                label{
+                    font-weight: 500;
+                }
+                input{
+                    width: 100%;
+                    padding: 5px 10px;
+                    border: none;
+                    border-bottom: 1px solid;
+                    outline: none;
+                }
+                textarea{
+                    outline: none;
+                    width: 100%;
+                    padding: 5px 10px;
+                }
+            }
+            .form-grp-btn{
+                display: flex;
+                justify-content: space-around;
+                button{
+                    width: 150px;
+                    border: none;
+                    cursor: pointer;
+                    padding: 10px;
+                    border-radius: 0.7em;
+                    font-weight: 600;
+                    font-size: 17px;
+                    outline: none;
+                }
+                .addNew{
+                    background-color: rgb(210, 105, 30);
+                    color: #fff;
+                }
+                .addNew:hover{
+                    background-color: rgb(192, 96, 27);
+                    
+                    
+                }
+            }
+        }
+    }
+    
+}
+.swipe-down{
+    animation: swipedown ease-out 0.5s;
+}
+.swipe-up{
+    animation: swipeup ease-out 0.5s;
+}
+.zoom{
+    animation: zms ease-out 1s;
+}
+.zoom2:hover{
+    animation: zms ease-out 1s infinite;
+}
+@keyframes zms {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes zm {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes swipedown {
+    from{
+        // transform: translateY(-100%);
+        transform: scale(0);
+    }
+    to{
+        // transform: translateY(0%);
+        transform: scale(1);
+    }
+}
+@keyframes swipeup {
+    
+    from{
+        // transform: translateY(0%);
+        transform: scale(1);
+    }
+    to{
+        // transform: translateY(-100%);
+        transform: scale(0);
+    }
+}
+
+@keyframes rotates{
+    from{
+        transform: rotate(0deg) ;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width:640px) {
+    
+}
+@media screen and (min-width:768px) {
+    .logo{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:1024px) {
+    .logo{
+        font-size: 22px;
+    }
+}
+@media screen and (min-width:1280px) {
+    .logo{
+        font-size: 25px;
+    }
+}
