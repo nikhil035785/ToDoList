@@ -8,44 +8,53 @@
     <title>To Do List</title>
 </head>
 <body onload="ListUpdate()">
+    <div class="nav-section">
+        <a href="#" class="logo">To-Do List</b></a>
+        <nav class="nav navbar">
+            <ul class="nav-menu">
+                <li><a href="index1.html">Temp1  <i class="fa fa-clipboard" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="todolist">
+        <section>
+            <center><h1>To-Do List</h1></center>
+            <div class="form">
+                <div class="form-grp">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="" required>
+                </div>
+                <div class="form-grp">
+                    <label for="decription">Description</label>
+                    <textarea name="decription" id="decription" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="form-btn">
+                    <button id="addlist">Add List <i class="fa fa-plus-square"></i></button>
+                    <button id="clearlist">Clear List <i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+        </section>
     
-    <section>
-        <center><h1>To-Do List</h1></center>
-        <div class="form">
-            <div class="form-grp">
-                <label for="title">Title</label>
-                <input type="text" id="title" placeholder="" required>
-            </div>
-            <div class="form-grp">
-                <label for="decription">Description</label>
-                <textarea name="decription" id="decription" cols="30" rows="5" required></textarea>
-            </div>
-            <div class="form-btn">
-                <button id="addlist">Add List <i class="fa fa-plus-square"></i></button>
-                <button id="clearlist">Clear List <i class="fa fa-trash"></i></button>
-            </div>
-        </div>
-    </section>
-   
-    <section id="FullListTable">
-        <center><h2>Full List</h2></center>
-        <table>
-            <thead>
-                <th>Sr. No.</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Action</th>
-            </thead>
-            <tbody id="myList">
-                <!-- <tr>
-                    <td>1</td>
-                    <td>Amdadb</td>
-                    <td>svdav</td>
-                    <td><button>Delete</button></td>
-                </tr> -->
-            </tbody>
-        </table>
-    </section>
+        <section id="FullListTable">
+            <center><h2>Full List</h2></center>
+            <table>
+                <thead>
+                    <th>Sr. No.</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="myList">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Amdadb</td>
+                        <td>svdav</td>
+                        <td><button>Delete</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,8 +6,11 @@
 
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  display: flex;
   padding: 10px;
+}
+
+#todolist {
+  display: flex;
 }
 
 section {
@@ -102,5 +105,52 @@ table td {
 
 table td button {
   background-color: red;
+}
+
+.nav-section {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #036d03;
+}
+
+.logo {
+  font-family: 'Lobster',Arial, Helvetica, sans-serif;
+  color: #FAE701;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 0.7rem;
+  font-weight: bold;
+  animation: bounce 5s infinite;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu li {
+  list-style-type: none;
+  font-size: 1em;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu li i.fa-trash-o {
+  padding: 5px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */
